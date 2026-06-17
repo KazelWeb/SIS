@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\unkxz\\Desktop\\WorkMaxx\\sanMigSIS\\StudentSIS.csproj": {}
+    "c:\\Users\\unkxz\\Desktop\\wawawawa\\SIS\\sanMigSIS\\StudentSIS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\unkxz\\Desktop\\WorkMaxx\\sanMigSIS\\StudentSIS.csproj": {
+    "c:\\Users\\unkxz\\Desktop\\wawawawa\\SIS\\sanMigSIS\\StudentSIS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\unkxz\\Desktop\\WorkMaxx\\sanMigSIS\\StudentSIS.csproj",
+        "projectUniqueName": "c:\\Users\\unkxz\\Desktop\\wawawawa\\SIS\\sanMigSIS\\StudentSIS.csproj",
         "projectName": "StudentSIS",
-        "projectPath": "C:\\Users\\unkxz\\Desktop\\WorkMaxx\\sanMigSIS\\StudentSIS.csproj",
+        "projectPath": "c:\\Users\\unkxz\\Desktop\\wawawawa\\SIS\\sanMigSIS\\StudentSIS.csproj",
         "packagesPath": "C:\\Users\\unkxz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\unkxz\\Desktop\\WorkMaxx\\sanMigSIS\\obj\\",
+        "outputPath": "c:\\Users\\unkxz\\Desktop\\wawawawa\\SIS\\sanMigSIS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\unkxz\\AppData\\Roaming\\NuGet\\NuGet.Config"

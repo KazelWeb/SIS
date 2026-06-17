@@ -6,7 +6,7 @@ using StudentSIS.Helpers;
 
 public partial class MainForm : Form
 {
-    private readonly DataService dataService;
+    private readonly IDataService dataService;
     private readonly bool isAdmin;
     private readonly Student? loggedStudent;
 
@@ -14,7 +14,7 @@ public partial class MainForm : Form
     private Button? _activeSidebarBtn;
     private Panel contentArea = null!;
 
-    public MainForm(DataService dataService, bool isAdmin, Student? loggedStudent)
+    public MainForm(IDataService dataService, bool isAdmin, Student? loggedStudent)
     {
         this.dataService    = dataService;
         this.isAdmin        = isAdmin;

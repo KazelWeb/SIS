@@ -6,10 +6,10 @@ using StudentSIS.Helpers;
 
 public partial class StudentGradesForm : UserControl
 {
-    private DataService dataService;
+    private IDataService dataService;
     private bool isAdmin;
 
-    public StudentGradesForm(DataService dataService, bool isAdmin)
+    public StudentGradesForm(IDataService dataService, bool isAdmin)
     {
         this.dataService = dataService;
         this.isAdmin = isAdmin;
@@ -50,7 +50,7 @@ public partial class StudentGradesForm : UserControl
         Label termSectionLabel = UITheme.MakeSectionLabel("TERM (OPTIONAL)");
         termSectionLabel.Location = new Point(384, 16);
 
-        TextBox termTextBox = UITheme.MakeTextBox(340, "e.g. Fall2025");
+        TextBox termTextBox = UITheme.MakeTextBox(340, "Term");
         termTextBox.Location = new Point(384, 36);
 
         Button getGradesButton = UITheme.MakePrimaryButton("Load Grades", 150, 38);
@@ -104,7 +104,26 @@ public partial class StudentGradesForm : UserControl
         var letterGradeCol = new DataGridViewTextBoxColumn { Name = "Grade", HeaderText = "Letter Grade", ReadOnly = true };
         gradesGrid.Columns.Add(letterGradeCol);
 
-        
+        gradesGrid.CellEndEdit += (s, e) =>
+        {
+            if (e.RowIndex < 0 || gradesGrid.Columns[e.ColumnIndex].Name != "Mark")
+                return;
+
+            var row = gradesGrid.Rows[e.RowIndex];
+            if (row.IsNewRow)
+                return;
+
+            string markValue = row.Cells["Mark"].Value?.ToString() ?? string.Empty;
+            if (double.TryParse(markValue, out double mark))
+            {
+                row.Cells["Grade"].Value = new Grade { Mark = mark }.GetLetterGrade();
+            }
+            else
+            {
+                row.Cells["Grade"].Value = "-";
+            }
+        };
+
         Button saveButton = UITheme.MakePrimaryButton("Save Changes", 150, 38);
         saveButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
         saveButton.Location = new Point(mainPanel.ClientSize.Width - 24 - saveButton.Width, mainPanel.ClientSize.Height - 16 - saveButton.Height);

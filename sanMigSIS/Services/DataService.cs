@@ -2,7 +2,12 @@
 
 using StudentSIS.Models;
 
-public class DataService
+/// <summary>
+/// In-memory data service implementation.
+/// Provides CRUD operations for all entities.
+/// Activity 2: Implements IDataService interface using dependency injection.
+/// </summary>
+public class DataService : IDataService
 {
     private List<Student> students = new();
     private List<Course> courses = new();

@@ -6,9 +6,9 @@ using StudentSIS.Helpers;
 
 public partial class UpdateAttendanceForm : UserControl
 {
-    private DataService dataService;
+    private IDataService dataService;
 
-    public UpdateAttendanceForm(DataService dataService)
+    public UpdateAttendanceForm(IDataService dataService)
     {
         this.dataService = dataService;
         InitializeComponent();

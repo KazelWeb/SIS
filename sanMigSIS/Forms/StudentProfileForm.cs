@@ -6,10 +6,10 @@ using StudentSIS.Helpers;
 
 public partial class StudentProfileForm : UserControl
 {
-    private DataService dataService;
+    private IDataService dataService;
     private bool isAdmin;
 
-    public StudentProfileForm(DataService dataService, bool isAdmin)
+    public StudentProfileForm(IDataService dataService, bool isAdmin)
     {
         this.dataService = dataService;
         this.isAdmin = isAdmin;

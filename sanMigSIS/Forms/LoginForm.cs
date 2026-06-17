@@ -6,11 +6,11 @@ using StudentSIS.Helpers;
 
 public partial class LoginForm : Form
 {
-    private readonly DataService dataService;
+    private readonly IDataService dataService;
     public bool IsAdmin { get; private set; }
     public Student? LoggedStudent { get; private set; }
 
-    public LoginForm(DataService dataService)
+    public LoginForm(IDataService dataService)
     {
         this.dataService = dataService;
         InitializeComponent();

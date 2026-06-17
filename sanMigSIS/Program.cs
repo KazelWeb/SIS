@@ -11,7 +11,8 @@ static class Program
     {
         ApplicationConfiguration.Initialize();
         
-        var dataService = new DataService();
+        // Activity 2: Dependency Injection - Create service with IDataService interface
+        IDataService dataService = new DataService();
         
         
         var apiThread = new Thread(() => StartAPI(dataService))
@@ -28,7 +29,7 @@ static class Program
         }
     }
 
-    private static void StartAPI(DataService dataService)
+    private static void StartAPI(IDataService dataService)
     {
         try
         {

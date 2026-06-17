@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "krcVC6NBjRw=",
+  "dgSpecHash": "XuwkpwGNVM8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\unkxz\\Desktop\\WorkMaxx\\sanMigSIS\\StudentSIS.csproj",
+  "projectFilePath": "c:\\Users\\unkxz\\Desktop\\wawawawa\\SIS\\sanMigSIS\\StudentSIS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\unkxz\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\unkxz\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

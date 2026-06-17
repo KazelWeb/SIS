@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using StudentSIS.API.Models.DTOs;
 using StudentSIS.Services;
 using StudentSIS.Models;
-using StudentSIS.Models;
 
 [ApiController]
 [Route("api/[controller]")]

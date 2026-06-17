@@ -6,9 +6,9 @@ using StudentSIS.Helpers;
 
 public partial class EnrollCourseForm : UserControl
 {
-    private DataService dataService;
+    private IDataService dataService;
 
-    public EnrollCourseForm(DataService dataService)
+    public EnrollCourseForm(IDataService dataService)
     {
         this.dataService = dataService;
         InitializeComponent();
